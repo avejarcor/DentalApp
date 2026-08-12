@@ -1,0 +1,30 @@
+# Build outputs
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / VS Code
+.idea/
+.vscode/
+
+# Test results
+TestResults/
+*.trx
+
+# Claude Code project metadata (local to this machine)
+.claude/
+
+# NuGet
+*.nupkg
+**/packages/*
+!**/packages/build/
+
+# OS files
+Thumbs.db
+.DS_Store
