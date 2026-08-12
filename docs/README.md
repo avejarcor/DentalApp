@@ -83,7 +83,7 @@ Requiere la misma base `VBDentalDb` operativa (los tests de `AuthServiceTests` y
 
 ## 5. Decisiones técnicas relevantes
 
-- Se usó **ADO.NET puro** (sin ORM) para mantener la solución simple y explícita, acorde al alcance de la prueba.
+- Se usó **ADO.NET puro** (sin ORM) para mantener la solución simple y explícita.
 - La prevención de doble reserva se resuelve en dos niveles: transacción `SERIALIZABLE` con `UPDATE ... WHERE Estado = 'Disponible'` (falla silenciosamente si ya fue tomado) y un índice único filtrado como respaldo a nivel de esquema.
 - Las contraseñas se almacenan con **PBKDF2-HMACSHA256** (10.000 iteraciones, salt aleatorio de 16 bytes por usuario), no en texto plano ni con hash simple.
 - Proyectos en formato **SDK-style** (`Microsoft.NET.Sdk`, `TargetFramework=net48`) por simplicidad de mantenimiento, totalmente compatibles con Visual Studio y `.NET Framework 4.8`.
